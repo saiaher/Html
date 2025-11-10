@@ -1,0 +1,23 @@
+.nav {
+      list-style: none;
+      display: flex;
+      padding: 15px 0;
+      background-color: black;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .nav {
+      margin-right: 50px;
+    }
+
+    .bar {
+     
+      color: beige;
+      padding: 50px;
+    }
+
+    .active {
+      color: yellow;
+      border-bottom: 2px solid yellow;
+    }

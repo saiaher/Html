@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Welcome to My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <h2>About Me</h2>
+            <p>I'm a blogger passionate about tech and programming.</p>
+        </aside>
+
+        <div class="blog-posts">
+            <article class="post">
+                <h2 class="post-title">How to Learn JavaScript</h2>
+                <p class="post-content">JavaScript is an essential language for web development. Here are some tips for learning it...</p>
+                <button class="comment-toggle-btn">Show Comments</button>
+                <div class="comments-section" style="display: none;">
+                    <textarea id="comment-input" placeholder="Write a comment..."></textarea>
+                    <button id="submit-comment">Submit Comment</button>
+                    <ul class="comments-list"></ul>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

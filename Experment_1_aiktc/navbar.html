@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Dropdown</title>
+  <style>
+    /* Navbar styles */
+    .nav {
+      
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      padding: 15px 0;
+      font-weight: bold;
+    }
+
+    .nav li {
+      margin-right: 50px;
+      position: relative; 
+    }
+
+    .bar {
+      color: beige;
+      padding: 10px 20px;
+      
+      display: block;
+      cursor: pointer;
+    }
+
+    .bar:hover {
+      color: yellow;
+    }
+
+    
+
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+
+      background: black;
+    }  
+
+    .dropdown-menu li a {
+      padding: 10px 15px;
+      display: block;
+      color: beige;
+      text-decoration: none;
+    }
+
+
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav">
+      <li><a href="#" class="bar active">Home</a></li>
+      <li><a href="#" class="bar">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="bar">Services</a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#" class="bar">Web</a></li>
+          <li><a href="#" class="bar">App</a></li>
+          <li><a href="#" class="bar">SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="bar">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    
+    let links = document.querySelectorAll('.bar');
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

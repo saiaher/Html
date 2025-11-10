@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; }
+        nav { background: #333; }
+        ul { list-style: none; padding: 0; display: flex; }
+        li { padding: 10px; }
+        a { color: white; text-decoration: none; padding: 8px 16px; }
+        a:hover { background: #555; }
+        .active { background: #4CAF50; }
+        .dropdown-content { display: none; position: absolute; background: #333; }
+        li:hover .dropdown-content { display: block; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="about">About</a></li>
+            <li><a href="#" id="services">Services</a></li>
+            <li>
+                <a href="#">More</a>
+                <div class="dropdown-content">
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Careers</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelectorAll('a').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
