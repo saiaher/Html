@@ -1,0 +1,44 @@
+
+
+
+
+
+JS CODE:
+
+
+
+
+if (emailValue === "") {
+emailError.textContent = "";
+} else if (!emailValue.includes("@") || !emailValue.includes(".")) { emailError.textContent = " Please enter a valid email address!";
+} else {
+emailError.textContent = "";
+}
+});
+
+// Form submit validation
+form.addEventListener("submit", function (event) {
+event.preventDefault(); // prevent form from refreshing
+
+// Reset messages
+passMsg.textContent = "";
+successMsg.style.display = "none";
+
+// Check email validity
+if (!emailInput.value.includes("@") || !emailInput.value.includes("."))
+{
+emailError.textContent = "Invalid email format!"; return;
+} else {
+emailError.textContent = "";
+}
+
+// Check password match
+if (password.value !== confirmPassword.value) { passMsg.textContent = "Passwords don’t match!"; return;
+} else {
+passMsg.textContent = "";
+}
+
+// If everything is correct
+successMsg.style.display = "block";
+successMsg.textContent = "Form submitted successfully!";
+});
