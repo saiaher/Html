@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Celsius: <input id="c" type="number">
+<p>Fahrenheit: <span id="f">0</span></p>
+
+<script>
+  // When you type in the Celsius box
+  c.oninput = function() {
+    // Convert to Fahrenheit and show it
+    f.innerText = c.value * 9/5 + 32;
+  }
+</script>
+
+</body>
+</html>

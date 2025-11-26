@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #greeting {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+
+        #error {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div id="greeting"></div>
+    <div id="error"></div>
+</div>
+
+<script>
+    // Example credentials
+    const validUsername = "sai123";
+    const validPassword = "pass123";
+
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const greeting = document.getElementById("greeting");
+        const error = document.getElementById("error");
+
+        if(username === validUsername && password === validPassword) {
+            greeting.textContent = `Welcome, ${username}!`;
+            error.textContent = "";
+        } else {
+            error.textContent = "Invalid username or password!";
+            greeting.textContent = "";
+        }
+    }
+</script>
+
+</body>
+</html>
