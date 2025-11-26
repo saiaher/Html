@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: skyblue;
+  border-radius: 10px;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+
+button:hover {
+  background-color: lightgreen;
+   
+}
+
+
+button:active {
+  background-color: orange;
+  
+}
+</style>
+</head>
+
+<body>
+
+<button id="myBtn">Click Me</button>
+
+<script>
+// When button is clicked
+document.getElementById("myBtn").addEventListener("click", function() {
+  console.log("Button clicked!");
+});
+</script>
+
+</body>
+</html>
