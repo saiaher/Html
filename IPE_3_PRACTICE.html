@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-button {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: skyblue;
-  border-radius: 10px;
-  transition: all 0.3s ease; /* smooth animation */
-}
-button:hover {
-  background-color: lightgreen;
-}
-button:active {
-  background-color: orange;
-  
-}
-</style>
-</head>
-
 <body>
 
-<button id="myBtn">Click Me</button>
+Celsius: <input id="c" type="number">
+<p>Fahrenheit: <span id="f">0</span></p>
 
 <script>
-
-document.getElementById("myBtn").addEventListener("click", function() {
-  console.log("Button clicked!");
-});
+  // When you type in the Celsius box
+  c.oninput = function() {
+    // Convert to Fahrenheit and show it
+    f.innerText = c.value * 9/5 + 32;
+  }
 </script>
 
 </body>
